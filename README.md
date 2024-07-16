@@ -12,7 +12,7 @@ int main() {
 }
 
 ```
-**Flag obligatoire**
+**Flags obligatoires**
 
 ```c
 CFLAGS = -Wall -Wextra -Werror -std=c++98
