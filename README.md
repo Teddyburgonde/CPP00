@@ -1,6 +1,6 @@
 ## **CPP**
 
-Hello world! 🙂
+Hello world ! 🙂
 
 ```c
 // librairie pour utiliser cout
