@@ -23,3 +23,10 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 g++ main.cpp 
 
 ```
+
+**Comprendre ce que sait une class et une instance**
+
+```c
+Une class c'est un moule qui permet de faire des gateaux
+Une instance c'est un gateau.
+```
