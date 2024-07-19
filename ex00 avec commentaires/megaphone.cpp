@@ -8,7 +8,8 @@ int main(int argc, char **argv) {
     std::string str;
     // Si il y a pas le bon nombres d'arguments
     if (argc < 2) {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOIS *\n";
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOIS *" << std::endl;
+        
         return (1);
     }
     // copie des valeurs

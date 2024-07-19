@@ -1,3 +1,5 @@
+// cree les deux classes 
+
 // 1. Cree une classe PhoneBook //! finish 
 // 2. Cree phone qui est une instance de la classe PhoneBook //!finish
 // 3. Crer un tableau de contact de la taille de 8 max.
@@ -11,6 +13,6 @@
 int main()
 {
     PhoneBook phone; // C'est une instance 
-    PhoneBook Tab[8];  // Creation du tableau ??? 
+    PhoneBook contacts[8];  // Creation du tableau ??? 
     return 0;
 }

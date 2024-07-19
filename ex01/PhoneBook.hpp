@@ -1,5 +1,5 @@
-#ifndef PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
 
 
 // Creation d'une class
@@ -12,3 +12,9 @@ class PhoneBook {
 };
 
 # endif 
+
+
+
+str[8]
+i++ '\0'
+str[i] = tab[0] 
