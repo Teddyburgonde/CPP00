@@ -5,7 +5,8 @@
 int main(int argc, char **argv) {
     std::string str;
     if (argc < 2) {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOIS *\n";
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOIS *";
+        std::cout << std::endl;
         return (1);
     }
     for(int i = 1; argv[i]; i++) {
