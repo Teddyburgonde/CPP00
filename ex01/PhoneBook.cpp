@@ -2,6 +2,7 @@
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void) {
+    // je dois initialiser le contenu de la classe Contact
     std::cout << "Constructor called" << std::endl;
     return ;
 }

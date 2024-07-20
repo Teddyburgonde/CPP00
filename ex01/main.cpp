@@ -1,8 +1,8 @@
 // cree les deux classes 
 
-// 1. Cree une classe PhoneBook //! finish 
-// 2. Cree phone qui est une instance de la classe PhoneBook //!finish
-// 3. Crer un tableau de contact de la taille de 8 max.
+// 1. Cree une classe PhoneBook //! Finish 
+// 2. Cree phone qui est une instance de la classe PhoneBook //! Finish
+// 3. Crer un tableau de contact de la taille de 8 max. //! Finish 
 // 4. Ajouter une option pour que l'utilisateur peut rajouter un contact.
 // 5. Pouvoir remplacer le plus ancien par le dernier contact ajouter.
 // 6. Ajouté une classe privé pour ce qui est dans une classe

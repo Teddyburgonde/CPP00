@@ -1,16 +1,18 @@
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
+#include "Contact.hpp"
 
 // Creation d'une class
 class PhoneBook {
     
-    public : // Je le met en public pour pouvoir utiliser ailleurs
+    public: // Je le met en public pour pouvoir utiliser ailleurs
     
     PhoneBook(void); // Constructeur
     ~PhoneBook(void); // Destructeur
 
-    Contact contacts[8]; // creation du tableau 
+    private:
+    Contact _contacts[8]; // creation du tableau 
 
 };
 
