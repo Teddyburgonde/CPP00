@@ -12,7 +12,6 @@
 
 int main()
 {
-    PhoneBook phone; // C'est une instance 
-    PhoneBook contacts[8];  // Creation du tableau ??? 
+    PhoneBook phone; // C'est une instance  
     return 0;
 }

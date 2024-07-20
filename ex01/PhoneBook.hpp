@@ -9,12 +9,9 @@ class PhoneBook {
     
     PhoneBook(void); // Constructeur
     ~PhoneBook(void); // Destructeur
+
+    Contact contacts[8]; // creation du tableau 
+
 };
 
-# endif 
-
-
-
-str[8]
-i++ '\0'
-str[i] = tab[0] 
+# endif
