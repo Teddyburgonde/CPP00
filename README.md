@@ -24,7 +24,7 @@ g++ main.cpp
 
 ```
 
-**Comprendre ce que sait une class et une instance**
+**Comprendre ce que sait une Class**
 
 ```c
 
