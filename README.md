@@ -24,7 +24,7 @@ g++ main.cpp
 
 ```
 
-**Comprendre ce que sait une Class**
+**Comprendre ce que sait une class**
 
 ```c
 
@@ -37,7 +37,7 @@ Une class permet de cree des objects.
 ```
 ![L’ordinateur veut se connecter a internet(5)](https://github.com/user-attachments/assets/1614d047-f76e-4776-9c7f-2072b1844fc1)
 
-**Comment creer une Class**
+**Comment creer une class**
 
 ```c
 // le type puis le nom 
