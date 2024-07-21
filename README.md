@@ -27,14 +27,12 @@ g++ main.cpp
 **Comprendre ce que sait une class et une instance**
 
 ```c
-Une class c'est un moule qui permet de faire des gateaux
-Une instance c'est un gateau.
 
 Une class c'est une structure personnalisé qui contient 2 choses :
 - Des variables mais en cpp on appele cela des attributs.
 - Des fonctions mais en cpp on appele cela des méthodes.
 
-Une class permet de cree des objects
+Une class permet de cree des objects.
 
 ```
 
