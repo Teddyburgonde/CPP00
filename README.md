@@ -29,4 +29,17 @@ g++ main.cpp
 ```c
 Une class c'est un moule qui permet de faire des gateaux
 Une instance c'est un gateau.
+
+Une class c'est une structure personnalisé qui contient 2 choses :
+- Des variables mais en cpp on appele cela des attributs.
+- Des fonctions mais en cpp on appele cela des méthodes.
+
+Une class permet de cree des objects
+
+file:///nfs/homes/tebandam/Pictures/Screenshots/classcpp.png
+
+
 ```
+
+```c
+
