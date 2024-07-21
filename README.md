@@ -26,7 +26,7 @@ g++ main.cpp
 
 **Comprendre ce que sait une Class**
 
-```c
+```
 
 Une class c'est une structure personnalisé qui contient 2 choses :
 - Des variables mais en cpp on appele cela des attributs.
