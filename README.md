@@ -36,8 +36,8 @@ Une class c'est une structure personnalisé qui contient 2 choses :
 
 Une class permet de cree des objects
 
-![L’ordinateur veut se connecter a internet(5)](https://github.com/user-attachments/assets/1614d047-f76e-4776-9c7f-2072b1844fc1)
-
 ```
+
+![L’ordinateur veut se connecter a internet(5)](https://github.com/user-attachments/assets/1614d047-f76e-4776-9c7f-2072b1844fc1)
 
 
