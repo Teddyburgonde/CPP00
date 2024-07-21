@@ -49,7 +49,8 @@ class PhoneBook {
     ~PhoneBook(void); // Destructeur
 
     private:
-    Contact _contacts[8]; // creation du tableau 
+    Contact _contacts[8]; // creation du tableau
+};
 
 ```
 
