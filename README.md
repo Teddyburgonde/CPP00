@@ -36,6 +36,22 @@ Une class permet de cree des objects.
 
 ```
 
+**Comment creer une Class 
+
+```c
+// le type puis le nom 
+class PhoneBook {
+    
+    public: // Je le met en public pour pouvoir utiliser ailleurs
+    
+    PhoneBook(void); // Constructeur
+    ~PhoneBook(void); // Destructeur
+
+    private:
+    Contact _contacts[8]; // creation du tableau 
+
+```
+
 ![L’ordinateur veut se connecter a internet(5)](https://github.com/user-attachments/assets/1614d047-f76e-4776-9c7f-2072b1844fc1)
 
 
