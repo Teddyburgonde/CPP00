@@ -10,8 +10,12 @@ class Contact {
     std::string _firstName;
     std::string _lastName;
     std::string _nickname;
-    std::string _phomeNumber;
+    std::string _phoneNumber;
     std::string _darkestSecret;
+
+    Contact(void); // Constructeur
+    ~Contact(void); // Destructeur
+
 };
 
 
