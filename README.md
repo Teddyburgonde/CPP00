@@ -36,10 +36,8 @@ Une class c'est une structure personnalisé qui contient 2 choses :
 
 Une class permet de cree des objects
 
-file:///nfs/homes/tebandam/Pictures/Screenshots/classcpp.png
-
+![L’ordinateur veut se connecter a internet(5)](https://github.com/user-attachments/assets/78e73d6d-b2c2-43e7-a88f-6dfccf475b19)
 
 ```
 
-```c
 
