@@ -13,8 +13,11 @@ class Contact {
     std::string _phoneNumber;
     std::string _darkestSecret;
 
+    public:
     Contact(void); // Constructeur
     ~Contact(void); // Destructeur
+
+    
 
 };
 

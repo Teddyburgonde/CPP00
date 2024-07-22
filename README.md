@@ -54,5 +54,35 @@ class PhoneBook {
 
 ```
 
+**C'est quoi un construteur ?**
+
+```c
+Un constructeur permet d'initialiser les attributs(les variables) de la classe lors de la création d'un objet.
+```
+
+**C'est quoi un destructeur ?**
+
+```c
+Un destructeur permet de liberer la memoire dun object.
+Il s'utile avec la fonction delete.
+```
+
+**GETTERS**
+
+```c
+C'est une méthode (fonction) qui retournent la valeur d'un attribut privé.
+Elle permet d'accéder à ces attributs depuis l'extérieur de la classe.
+const a la fin permet de garantir que l'objet ne sera pas modifier.
+Exemple : 
+std::string get_first_name() const;
+```
+
+**SETTERS**
+
+```c
+Setters : Méthodes qui permettent de modifier la valeur d'un attribut privé. Elles contrôlent la façon dont ces attributs peuvent être modifiés.
+Exemple :
+int set_first_name(std::string first_name);
+```
 
 

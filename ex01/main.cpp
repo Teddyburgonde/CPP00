@@ -10,10 +10,14 @@
 // 7. Ajouté une classe privé pour ce qui est dans une classe
 // 8. Ajouté une classe public pour ce qui est a l'exterieur de la classe
 
-#include "utils.cpp"
+
+
+// while (getline(std::cin, s))
+
+#include "PhoneBook.cpp"
 
 int main()
 {
-    print_message_accueil();
+    print_menu();
     return 0;
 }
