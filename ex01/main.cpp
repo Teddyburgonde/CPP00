@@ -10,10 +10,10 @@
 // 7. Ajouté une classe privé pour ce qui est dans une classe
 // 8. Ajouté une classe public pour ce qui est a l'exterieur de la classe
 
-#include "PhoneBook.class.hpp"
+#include "utils.cpp"
 
 int main()
 {
-    PhoneBook phone; // C'est une instance  
+    print_message_accueil();
     return 0;
 }
