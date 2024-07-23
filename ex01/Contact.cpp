@@ -19,6 +19,13 @@ Contact::~Contact()
 }
 
 
+//Contact contacts[1];
+// contacts[0].set_first_name("John");
+// apres un std::cout << "First name: " << contacts[index].get_first_name() << std::endl;
+// il devriat m'afficher ceci
+
+
+
 // GETTERS
 // std::string Contact::get_first_name() const {
 //     return _first_name;
@@ -27,11 +34,6 @@ Contact::~Contact()
 
 
 // SETTERS
-
-
-
-
-
 
 
 
