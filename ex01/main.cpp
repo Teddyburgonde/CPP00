@@ -15,9 +15,12 @@
 // while (getline(std::cin, s))
 
 #include "PhoneBook.cpp"
+#include "Contact.cpp"
 
 int main()
 {
-    print_menu();
-    return 0;
+    PhoneBook phone; // creation d'un instance(un objet) phone
+    //phone.print_menu();
+    phone.displayContact();
+    return (0);
 }

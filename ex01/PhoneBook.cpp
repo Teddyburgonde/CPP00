@@ -16,9 +16,10 @@ void    PhoneBook::print_menu(void)
     std::cout <<std::endl;
     std::cout << "*************************************\n"
                  "*                                   *\n"
-                 "*               WELCOME             *\n"
-                 "*               to the              *\n"
+                 "*              WELCOME              *\n"
+                 "*              to the               *\n"
                  "*              Phone Book           *\n"
+                 "*                                   *\n"
                  "*************************************\n"
                  "*                                   *\n"
                  "*      ADD - Add a new contact      *\n"
@@ -28,13 +29,15 @@ void    PhoneBook::print_menu(void)
                  "*************************************\n" << std::endl;
 }
 
-void    PhoneBook::displayContact(void) const
-{
-    // Contact Display
-    //---------------
-    //|    index|     first name...
-    //---------------
 
-    // 4 colonnes separer par des | , 10 caracteres (entre les |), aligné a droite
-    // index, first name, last name, nickname
+void PhoneBook::displayContact(void) const
+{
+    std::cout <<std::endl;
+    std::cout << "***********************************************\n"
+                 "*                  Contacts                   *\n"
+                 "***********************************************\n"
+                 "*                                             *\n"
+                 "*|     index|first name| last name|  nickname|*\n"
+                 "*                                             *\n"
+                 "***********************************************\n" << std::endl;
 }
