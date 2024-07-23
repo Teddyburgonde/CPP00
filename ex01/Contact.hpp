@@ -17,8 +17,19 @@ class Contact {
     Contact(void); // Constructeur
     ~Contact(void); // Destructeur
 
-    
+    // Signatures des Getters
+    std::string getFirstName() const;
+    std::string getLastName() const;
+    std::string getNickName() const;
+    std::string getPhoneNumber() const ;
+    std::string getDarkestSecret() const ;
 
+    // Signatures des Setters
+    void    Contact::setFirstName(std::string n_FirstName);
+    void    Contact::setLastName(std::string n_LastName);
+    void    Contact::setNickname(std::string n_NickName);
+    void    Contact::setPhoneNumber(std::string n_phoneNumber);
+    void    Contact::setDarkestSecret(std::string n_darkestSecret);
 };
 
 

@@ -70,19 +70,15 @@ Il s'utile avec la fonction delete.
 **GETTERS**
 
 ```c
-C'est une méthode (fonction) qui retournent la valeur d'un attribut privé.
-Elle permet d'accéder à ces attributs depuis l'extérieur de la classe.
-const a la fin permet de garantir que l'objet ne sera pas modifier.
-Exemple : 
-std::string get_first_name() const;
+Il permet d'obtenir la variable qui est en privé
+
 ```
 
 **SETTERS**
 
 ```c
-Setters : Méthodes qui permettent de modifier la valeur d'un attribut privé. Elles contrôlent la façon dont ces attributs peuvent être modifiés.
-Exemple :
-int set_first_name(std::string first_name);
+Il permet de changer la valeur d'une variable qui est en privé.
+
 ```
 
 

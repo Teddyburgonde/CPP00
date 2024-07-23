@@ -1,16 +1,22 @@
-// cree les deux classes 
+// Cree fonction display
 
-// 1. Cree une classe PhoneBook //! Finish 
-// 2. Cree phone qui est une instance de la classe PhoneBook //! Finish
-// 3. Crer un tableau de contact de la taille de 8 max. //! Finish 
-// 4. Comment initialiser attributs tableau de contact
+// Cree la fonction ADD
+// Pouvoir remplacer le plus ancien par le dernier contact ajouter.
+// Cree la fonctions search 
+// exit 
 
-// 5. Ajouter une option pour que l'utilisateur peut rajouter un contact.
-// 6. Pouvoir remplacer le plus ancien par le dernier contact ajouter.
-// 7. Ajouté une classe privé pour ce qui est dans une classe
-// 8. Ajouté une classe public pour ce qui est a l'exterieur de la classe
+//std::cout << "first name: " << contact.getFirstName() << std::endl;
 
+// GETTERS
+// std::string Contact::get_first_name() const {
+//     return _first_name;
+//}
 
+//Contact contacts[1];
+// contacts[0].set_first_name("John");
+
+// apres un std::cout << "First name: " << contacts[index].get_first_name() << std::endl;
+// il devriat m'afficher ceci
 
 // while (getline(std::cin, s))
 

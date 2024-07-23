@@ -10,15 +10,23 @@ class PhoneBook {
     
     PhoneBook(void); // Constructeur
     ~PhoneBook(void); // Destructeur
-    void    print_menu(void);
-    void    displayContact(void) const;
+    
+    // ce qu'on m'a dit de creer 
     void    addNewContact();
     void    searchContact();
-    // void    exit(); Est ce que j'en ai besoin ??? 
+
+
+    void    displayContact(void) const;
+    void    print_menu(void);
+    
 
     private:
+	int		index; // int index ???
     Contact _contacts[8]; // creation du tableau 
-    // int index ??????
+    
+
+
+
     
 };
 
