@@ -29,15 +29,18 @@ void    PhoneBook::print_menu(void)
                  "*************************************\n" << std::endl;
 }
 
-
 void PhoneBook::displayContact(void) const
 {
+    // En-tête du tableau 
     std::cout <<std::endl;
-    std::cout << "***********************************************\n"
-                 "*                  Contacts                   *\n"
-                 "***********************************************\n"
-                 "*                                             *\n"
-                 "*|     index|first name| last name|  nickname|*\n"
-                 "*                                             *\n"
-                 "***********************************************\n" << std::endl;
+    std::cout << "*********************************************\n"
+                 "*                  Contacts                 *\n"
+                 "*********************************************\n"
+                 "|     index|first name| last name|  nickname|\n"
+                 "|----------|----------|----------|----------|\n" << std::endl;
+    for (size_t i = 0; i < 8; i++)
+	{
+	std::cout << "|         " << i << "|";
+    }
 }
+
