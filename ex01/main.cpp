@@ -29,7 +29,7 @@ int main()
     PhoneBook phone; // creation d'un instance(un objet) phone
     std::string commands;
     //phone.print_menu();
-    //phone.displayContact();
+    phone.displayContact();
     while (1)
     {
         phone.print_menu();

@@ -35,18 +35,23 @@ void PhoneBook::displayContact(void) const
 {
     // En-tête du tableau 
     std::cout <<std::endl;
-    std::cout << "*********************************************\n"
-                 "*                  Contacts                 *\n"
-                 "*********************************************\n"
-                 "|     index|first name| last name|  nickname|\n"
-                 "|----------|----------|----------|----------|\n" << std::endl;
+    std::cout << "*********************************************" <<std::endl;
+    std::cout << "*                  Contacts                 *" <<std::endl;
+    std::cout << "*********************************************" <<std::endl;
+    std::cout << "|     index|first name| last name|  nickname|" <<std::endl;
+    std::cout << "|----------|----------|----------|----------|" <<std::endl;
     for (size_t i = 0; i < 8; i++)
 	{
-	    std::cout << "|         " << i << "|";
+	    std::cout << "|         " << i;
+        std::cout << "|         " << i;
+        std::cout << "|         " << i;
+        std::cout << "|         " << i << "|"; 
+        std::cout << std::endl;
     }
 }
 
-void PhoneBook::addNewContact()
+
+void    PhoneBook::addNewContact()
 {
     // Declaration des variables
     std::string firstName;
@@ -98,12 +103,14 @@ void PhoneBook::addNewContact()
 		std::cout << std::endl << "Error : You have left a field blank." << std::endl;
 		return ;
 	}
-    // On stock les informations dans le tableau contact
+    
+    //On stock les informations dans le tableau contact
     contact[index].setFirstName(firstName);
     contact[index].setLastName(lastName);
     contact[index].setNickname(nickname);
     contact[index].setPhoneNumber(phoneNumber);
     contact[index].setDarkestSecret(darkestSecret);
+
 
     // Si il y a deja 8 contact cela veut dire
     // que le tableau est plein et donc on remet index a 0

@@ -12,7 +12,7 @@ class PhoneBook {
     PhoneBook(void); // Constructeur
     ~PhoneBook(void); // Destructeur
     
-    // ce qu'on m'a dit de creer 
+    // ce qu'on m'a dit de creer
     void addNewContact();
     void searchContact();
 
