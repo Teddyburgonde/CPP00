@@ -2,8 +2,9 @@
 
 // Cree la fonction ADD
 // Pouvoir remplacer le plus ancien par le dernier contact ajouter.
-// Cree la fonctions search 
-// exit 
+// Cree la fonction search 
+// exit //! Finish 
+// getline //! Finish 
 
 //std::cout << "first name: " << contact.getFirstName() << std::endl;
 
@@ -23,10 +24,29 @@
 #include "PhoneBook.cpp"
 #include "Contact.cpp"
 
+
+
 int main()
 {
     PhoneBook phone; // creation d'un instance(un objet) phone
+    std::string commands;
     //phone.print_menu();
-    phone.displayContact();
-    return (0);
+    //phone.displayContact();
+    while (1)
+    {
+        phone.print_menu();
+        if (std::cin.eof() == 1)
+            return (1); 
+        std::cout << "> ";
+        std::getline(std::cin, commands);
+        if (commands == "add")
+            addNewContact();
+        else if (commands == "exit")
+        {
+            std::cout << "See you soon" << std::endl;
+            break;
+        }
+        else
+            std:: cout << "Error: you have to choose between add , search and exit" << std::endl;
+    }
 }
