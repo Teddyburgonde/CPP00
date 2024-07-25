@@ -31,6 +31,32 @@ void    PhoneBook::print_menu(void)
                  "*************************************\n" << std::endl;
 }
 
+std::string printFormatForDisplayContact(std::string str)
+{
+    std::string tmp;
+
+    // si la string est inferieur a 10 par exemple dany
+    if (str.length() <= 10)
+    {
+        // i commence a 4 quuand il arrive a 10 on ecris un espace
+        // donc i = 4 puis il vas jusqua 10 donc il avance de 6 cases et donc a la 6 eme case du tableau on ecris un espace
+        // et le reste du tableau on rajoute str , c'est a dire dany ce qui va donner |      dany|
+        for (int i = str.length(); i < 10; i++)
+            tmp += " ";
+        tmp += str;
+    }
+    else
+    {
+        // la on met tmp (danyyyyyyyyyyyyyyyyyy) dans le tableau
+        tmp = str;
+        tmp.resize(9); // on le reduis a 9 danyyyyyy
+        tmp += "."; // et on lui rajoute un . a la fin danyyyyyy.
+    }
+    return (tmp);
+}
+
+
+
 void PhoneBook::displayContact(void) const
 {
     // En-tête du tableau 
@@ -44,13 +70,12 @@ void PhoneBook::displayContact(void) const
     for (size_t i = 0; i < 8; i++)
 	{
 	    std::cout << "|         " << i;
-        std::cout << contact[i].getFirstName();
-        std::cout << "|         " << i;
-        std::cout << "|         " << i << "|"; 
-        std::cout << std::endl;
+        std::cout << "|" << printFormatForDisplayContact(contact[i].getFirstName());
+        std::cout << "|" << printFormatForDisplayContact(contact[i].getLastName());
+        std::cout << "|" << printFormatForDisplayContact(contact[i].getNickName());
+        std::cout << "|         " << std::endl;
     }
 }
-
 
 void    PhoneBook::addNewContact()
 {

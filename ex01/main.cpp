@@ -5,20 +5,6 @@
 // exit //! Finish 
 // getline //! Finish 
 
-//std::cout << "first name: " << contact.getFirstName() << std::endl;
-
-// GETTERS
-// std::string Contact::get_first_name() const {
-//     return _first_name;
-//}
-
-//Contact contacts[1];
-// contacts[0].set_first_name("John");
-
-// apres un std::cout << "First name: " << contacts[index].get_first_name() << std::endl;
-// il devriat m'afficher ceci
-
-// while (getline(std::cin, s))
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
