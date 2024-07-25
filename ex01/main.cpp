@@ -39,6 +39,8 @@ int main()
         std::getline(std::cin, commands);
         if (commands == "add")
             phone.addNewContact();
+        if (commands == "search")
+            phone.displayContact();
         else if (commands == "exit")
         {
             std::cout << "See you soon" << std::endl;

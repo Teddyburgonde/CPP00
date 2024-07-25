@@ -40,10 +40,11 @@ void PhoneBook::displayContact(void) const
     std::cout << "*********************************************" <<std::endl;
     std::cout << "|     index|first name| last name|  nickname|" <<std::endl;
     std::cout << "|----------|----------|----------|----------|" <<std::endl;
+    // boucle pour afficher les colonnes
     for (size_t i = 0; i < 8; i++)
 	{
 	    std::cout << "|         " << i;
-        std::cout << "|         " << i;
+        std::cout << contact[i].getFirstName();
         std::cout << "|         " << i;
         std::cout << "|         " << i << "|"; 
         std::cout << std::endl;
