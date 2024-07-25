@@ -1,6 +1,7 @@
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
+# include <iostream>
 #include "Contact.hpp"
 
 // Creation d'une class
@@ -12,8 +13,8 @@ class PhoneBook {
     ~PhoneBook(void); // Destructeur
     
     // ce qu'on m'a dit de creer 
-    void    addNewContact();
-    void    searchContact();
+    void addNewContact();
+    void searchContact();
 
 
     void    displayContact(void) const;
@@ -21,13 +22,9 @@ class PhoneBook {
     
 
     private:
-	int		index; // int index ???
-    Contact _contacts[8]; // creation du tableau 
-    
+	int		index; 
+    Contact contact[8]; // creation du tableau 
 
-
-
-    
 };
 
 # endif

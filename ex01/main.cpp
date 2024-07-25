@@ -1,6 +1,5 @@
 // Cree fonction display
-
-// Cree la fonction ADD
+// Cree la fonction ADD //!Finish
 // Pouvoir remplacer le plus ancien par le dernier contact ajouter.
 // Cree la fonction search 
 // exit //! Finish 
@@ -21,9 +20,8 @@
 
 // while (getline(std::cin, s))
 
-#include "PhoneBook.cpp"
-#include "Contact.cpp"
-
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 
 int main()
@@ -40,7 +38,7 @@ int main()
         std::cout << "> ";
         std::getline(std::cin, commands);
         if (commands == "add")
-            addNewContact();
+            phone.addNewContact();
         else if (commands == "exit")
         {
             std::cout << "See you soon" << std::endl;

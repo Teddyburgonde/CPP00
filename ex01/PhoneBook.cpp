@@ -42,11 +42,11 @@ void PhoneBook::displayContact(void) const
                  "|----------|----------|----------|----------|\n" << std::endl;
     for (size_t i = 0; i < 8; i++)
 	{
-	std::cout << "|         " << i << "|";
+	    std::cout << "|         " << i << "|";
     }
 }
 
-void addNewContact()
+void PhoneBook::addNewContact()
 {
     // Declaration des variables
     std::string firstName;
@@ -101,12 +101,10 @@ void addNewContact()
     // On stock les informations dans le tableau contact
     contact[index].setFirstName(firstName);
     contact[index].setLastName(lastName);
-    contact[index].setNickname(nickName);
+    contact[index].setNickname(nickname);
     contact[index].setPhoneNumber(phoneNumber);
     contact[index].setDarkestSecret(darkestSecret);
 
-    std::cout << "la valeur de contact[0] est :"  contact[index].setFirstName(firstName); << std::endl;
-    std::cout << "la valeur de contact[1] est :"  contact[index].setLastName(LastName); << std::endl;
     // Si il y a deja 8 contact cela veut dire
     // que le tableau est plein et donc on remet index a 0
     if (index == 7)
