@@ -1,9 +1,4 @@
-// Cree fonction display
-// Cree la fonction ADD //!Finish
-// Pouvoir remplacer le plus ancien par le dernier contact ajouter.
-// Cree la fonction search 
-// exit //! Finish 
-// getline //! Finish 
+// std::cout << "Error: you have to choose between add , search and exit" << std::endl;
 
 
 #include "PhoneBook.hpp"
@@ -14,8 +9,10 @@ int main()
 {
     PhoneBook phone; // creation d'un instance(un objet) phone
     std::string commands;
-    //phone.print_welcome();
-    //phone.displayContact();
+    int index;
+
+    index = 0;
+    phone.print_welcome();
     while (1)
     {
         phone.print_choice_menu();
@@ -23,18 +20,15 @@ int main()
             return (1); 
         std::cout << "> ";
         std::getline(std::cin, commands);
-        if (commands == "add")
+        if (commands == "ADD")
             phone.addNewContact();
-        if (commands == "search")
-        {
-            // function search
-        }
-        else if (commands == "exit")
+        else if (commands == "SEARCH")
+            phone.searchContact();
+        else if (commands == "EXIT")
         {
             std::cout << "See you soon" << std::endl;
             break;
         }
-        else
-            std:: cout << "Error: you have to choose between add , search and exit" << std::endl;
+        std::cout << "Error: you have to choose between add , search and exit" << std::endl;
     }
 }

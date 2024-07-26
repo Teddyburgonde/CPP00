@@ -19,7 +19,7 @@ class PhoneBook {
     void    displayContact(void) const;
     void    print_welcome(void);
     void    print_choice_menu(void);
-    
+    void    print_info_one_contact(int index);
 
     private:
 	int		index; 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib> // Add this line
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
@@ -27,13 +28,13 @@ void    PhoneBook::print_choice_menu(void)
 void    PhoneBook::print_welcome(void)
 {
     std::cout <<std::endl;
-    std::cout << "*************************************" << std::endl;
-    std::cout << "*                                   *" << std::endl;
-    std::cout << "*              WELCOME              *" << std::endl;
-    std::cout << "*              to the               *" << std::endl;
-    std::cout << "*              Phone Book           *" << std::endl;
-    std::cout << "*                                   *" << std::endl;
-    std::cout << "*************************************" << std::endl;
+    std::cout << "***************************************" << std::endl;
+    std::cout << "*                                     *" << std::endl;
+    std::cout << "*              WELCOME                *" << std::endl;
+    std::cout << "*              to the                 *" << std::endl;
+    std::cout << "*              Phone Book             *" << std::endl;
+    std::cout << "*                                     *" << std::endl;
+    std::cout << "***************************************" << std::endl;
 }
 
 std::string printFormatForDisplayContact(std::string str)
@@ -112,7 +113,6 @@ void    PhoneBook::addNewContact()
 		return ;
 	}
 
-
     std::cout << "Enter nickname: ";
     std::getline(std::cin, nickname);
     if (!nickname[0] || std::cin.eof())
@@ -153,23 +153,32 @@ void    PhoneBook::addNewContact()
         index++; // les informations sur les contacts ne mettrons a la suite
 }
 
+void    PhoneBook::print_info_one_contact(int index)
+{
+    std::cout << "First name: " << contact[index].getFirstName() << std::endl;
+    std::cout << "Last name: "  << contact[index].getLastName() << std::endl;
+    std::cout << "Nickname: "  << contact[index].getNickName() << std::endl;
+    std::cout << "Phone number: " << contact[index].getPhoneNumber() << std::endl;
+    std::cout << "Darkest Secret: " << contact[index].getDarkestSecret() << std::endl;
+}
 
-int    PhoneBook::searchContact()
+void    PhoneBook::searchContact()
 {
 
-    PhoneBook phone;
     std::string search;
     int index_transform_to_int;
-
-    phone.displayContact();
-    std::cout << "Enter contact index: " << std::endl
+    displayContact();
+    
+    std::cout << "Enter contact index: " << std::endl;
     std::getline(std::cin, search);
-    if (!search[0] || search.size() != 1 || !search.isdigit(search[0]))
+    // .c_str() converti l'object en chaine de caractere et atoi transforme cette chaine 
+    // de caractere en int 
+    if (search.empty() || search.size() != 1 || !isdigit(search[0]), atoi(search.c_str()) > 7)
     {
-        std::cout << "Error : Bad argument" << std::endl
-        return (1);
+        std::cout << "Error: Bad argument" << std::endl;
+        return ;
     }
     // convertion de l'index
-    index_transform_to_int = atoi(search);
-    return (0);
+    index_transform_to_int = atoi(search.c_str());
+    print_info_one_contact(index_transform_to_int);
 }
