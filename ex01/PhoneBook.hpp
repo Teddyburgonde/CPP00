@@ -13,12 +13,12 @@ class PhoneBook {
     ~PhoneBook(void); // Destructeur
     
     // ce qu'on m'a dit de creer
-    void addNewContact();
-    void searchContact();
-
+    void    addNewContact();
+    void    searchContact();
 
     void    displayContact(void) const;
-    void    print_menu(void);
+    void    print_welcome(void);
+    void    print_choice_menu(void);
     
 
     private:

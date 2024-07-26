@@ -14,11 +14,11 @@ int main()
 {
     PhoneBook phone; // creation d'un instance(un objet) phone
     std::string commands;
-    //phone.print_menu();
-    phone.displayContact();
+    //phone.print_welcome();
+    //phone.displayContact();
     while (1)
     {
-        phone.print_menu();
+        phone.print_choice_menu();
         if (std::cin.eof() == 1)
             return (1); 
         std::cout << "> ";
@@ -26,7 +26,10 @@ int main()
         if (commands == "add")
             phone.addNewContact();
         if (commands == "search")
+        {
             phone.displayContact();
+            // function search
+        }
         else if (commands == "exit")
         {
             std::cout << "See you soon" << std::endl;

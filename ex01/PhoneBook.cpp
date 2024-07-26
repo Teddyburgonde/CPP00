@@ -13,22 +13,27 @@ PhoneBook::~PhoneBook(void)
 
 }
 
-void    PhoneBook::print_menu(void)
+
+void    PhoneBook::print_choice_menu(void)
+{
+    std::cout << "***************************************" << std::endl;
+    std::cout << "*      ADD - Add a new contact        *" << std::endl;
+    std::cout << "*      SEARCH - Display all contact   *" << std::endl;
+    std::cout << "*      EXIT - Exit PhoneBook          *" << std::endl;
+    std::cout << "*                                     *" << std::endl;
+    std::cout << "**************************************"  << std::endl;
+}
+
+void    PhoneBook::print_welcome(void)
 {
     std::cout <<std::endl;
-    std::cout << "*************************************\n"
-                 "*                                   *\n"
-                 "*              WELCOME              *\n"
-                 "*              to the               *\n"
-                 "*              Phone Book           *\n"
-                 "*                                   *\n"
-                 "*************************************\n"
-                 "*                                   *\n"
-                 "*      ADD - Add a new contact      *\n"
-                 "*      SEARCH - Display all contact *\n"
-                 "*      EXIT - Exit PhoneBook        *\n"
-                 "*                                   *\n"
-                 "*************************************\n" << std::endl;
+    std::cout << "*************************************" << std::endl;
+    std::cout << "*                                   *" << std::endl;
+    std::cout << "*              WELCOME              *" << std::endl;
+    std::cout << "*              to the               *" << std::endl;
+    std::cout << "*              Phone Book           *" << std::endl;
+    std::cout << "*                                   *" << std::endl;
+    std::cout << "*************************************" << std::endl;
 }
 
 std::string printFormatForDisplayContact(std::string str)
@@ -79,6 +84,8 @@ void PhoneBook::displayContact(void) const
 
 void    PhoneBook::addNewContact()
 {
+    PhoneBook phone;
+    std::string search;
     // Declaration des variables
     std::string firstName;
     std::string lastName;
@@ -129,7 +136,7 @@ void    PhoneBook::addNewContact()
 		std::cout << std::endl << "Error : You have left a field blank." << std::endl;
 		return ;
 	}
-    
+
     //On stock les informations dans le tableau contact
     contact[index].setFirstName(firstName);
     contact[index].setLastName(lastName);
@@ -147,3 +154,42 @@ void    PhoneBook::addNewContact()
 }
 
 
+int    PhoneBook::searchContact()
+{
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    std::string commands;
+    while (1)
+    {
+        if (std::cin.eof() == 1)
+            return (1); 
+        std::cout << "> ";
+        std::getline(std::cin, commands);
+        if (commands == "1")
+        {   
+            std::cout << "cela fonctionne" << std::endl;
+            std::cout << "|" << printFormatForDisplayContact(contact[i].getFirstName());
+        }
+    }
+    return (0);
+}
