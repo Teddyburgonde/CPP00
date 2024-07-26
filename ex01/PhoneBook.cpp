@@ -156,40 +156,20 @@ void    PhoneBook::addNewContact()
 
 int    PhoneBook::searchContact()
 {
-    
 
+    PhoneBook phone;
+    std::string search;
+    int index_transform_to_int;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    std::string commands;
-    while (1)
+    phone.displayContact();
+    std::cout << "Enter contact index: " << std::endl
+    std::getline(std::cin, search);
+    if (!search[0] || search.size() != 1 || !search.isdigit(search[0]))
     {
-        if (std::cin.eof() == 1)
-            return (1); 
-        std::cout << "> ";
-        std::getline(std::cin, commands);
-        if (commands == "1")
-        {   
-            std::cout << "cela fonctionne" << std::endl;
-            std::cout << "|" << printFormatForDisplayContact(contact[i].getFirstName());
-        }
+        std::cout << "Error : Bad argument" << std::endl
+        return (1);
     }
+    // convertion de l'index
+    index_transform_to_int = atoi(search);
     return (0);
 }

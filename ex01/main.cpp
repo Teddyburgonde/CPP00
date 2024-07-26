@@ -27,7 +27,6 @@ int main()
             phone.addNewContact();
         if (commands == "search")
         {
-            phone.displayContact();
             // function search
         }
         else if (commands == "exit")
