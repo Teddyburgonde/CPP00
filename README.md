@@ -81,4 +81,14 @@ Il permet de changer la valeur d'une variable qui est en privé.
 
 ```
 
+**How to create function search**
+```c
+1. Affichage de la liste de contacts :
+2. Demande de l'index du contact :
+3. Validation de l'entrée :
+4. Gestion des erreurs d'entrée :
+5. Conversion de l'index :
+6. Affichage des informations du contact :
+```
+
 
