@@ -3,6 +3,7 @@
 NAME = megaphone
 
 #================ COMPILATOR ================#
+
 CC = c++
 
 #=================== FLAGS ==================#
@@ -20,15 +21,15 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) :
 	@$(CC) $(CFLAGS) megaphone.cpp -o $(NAME)
-	@printf "$(GREEN) EXECUTABLE READY !$(RESET)\n"
+	@echo "$(GREEN) EXECUTABLE READY !$(RESET)"
 
 clean: 
-	@$(RM) $(OBJS)
+	@$(RM)
 
 fclean: clean
-	@$(RM) $(NAME) 
+	@$(RM) $(NAME)
 
 re: fclean all
 

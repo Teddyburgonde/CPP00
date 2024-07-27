@@ -1,6 +1,15 @@
-#include <iostream>
-#include <string>
-#include <cstdlib> // Add this line
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/27 12:07:15 by tebandam          #+#    #+#             */
+/*   Updated: 2024/07/27 12:07:34 by tebandam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
@@ -11,7 +20,6 @@ PhoneBook::PhoneBook(void)
 
 PhoneBook::~PhoneBook(void) 
 {
-
 }
 
 
@@ -22,7 +30,7 @@ void    PhoneBook::print_choice_menu(void)
     std::cout << "*      SEARCH - Display all contact   *" << std::endl;
     std::cout << "*      EXIT - Exit PhoneBook          *" << std::endl;
     std::cout << "*                                     *" << std::endl;
-    std::cout << "**************************************"  << std::endl;
+    std::cout << "***************************************"  << std::endl;
 }
 
 void    PhoneBook::print_welcome(void)
@@ -41,53 +49,46 @@ std::string printFormatForDisplayContact(std::string str)
 {
     std::string tmp;
 
-    // si la string est inferieur a 10 par exemple dany
     if (str.length() <= 10)
     {
-        // i commence a 4 quuand il arrive a 10 on ecris un espace
-        // donc i = 4 puis il vas jusqua 10 donc il avance de 6 cases et donc a la 6 eme case du tableau on ecris un espace
-        // et le reste du tableau on rajoute str , c'est a dire dany ce qui va donner |      dany|
-        for (int i = str.length(); i < 10; i++)
+        // until i equals 10 - word size
+        // print space
+        // at the end we add the word
+        for (size_t i = 0; i < (10 - str.length()); i++)
             tmp += " ";
         tmp += str;
     }
     else
     {
-        // la on met tmp (danyyyyyyyyyyyyyyyyyy) dans le tableau
         tmp = str;
-        tmp.resize(9); // on le reduis a 9 danyyyyyy
-        tmp += "."; // et on lui rajoute un . a la fin danyyyyyy.
+        tmp.resize(9);
+        tmp += ".";
     }
     return (tmp);
 }
 
-
-
 void PhoneBook::displayContact(void) const
 {
-    // En-tête du tableau 
     std::cout <<std::endl;
     std::cout << "*********************************************" <<std::endl;
     std::cout << "*                  Contacts                 *" <<std::endl;
     std::cout << "*********************************************" <<std::endl;
     std::cout << "|     index|first name| last name|  nickname|" <<std::endl;
     std::cout << "|----------|----------|----------|----------|" <<std::endl;
-    // boucle pour afficher les colonnes
     for (size_t i = 0; i < 8; i++)
 	{
 	    std::cout << "|         " << i;
         std::cout << "|" << printFormatForDisplayContact(contact[i].getFirstName());
         std::cout << "|" << printFormatForDisplayContact(contact[i].getLastName());
         std::cout << "|" << printFormatForDisplayContact(contact[i].getNickName());
-        std::cout << "|         " << std::endl;
+        std::cout << "|" << std::endl;
     }
 }
 
 void    PhoneBook::addNewContact()
 {
     PhoneBook phone;
-    std::string search;
-    // Declaration des variables
+
     std::string firstName;
     std::string lastName;
     std::string nickname;
@@ -101,9 +102,6 @@ void    PhoneBook::addNewContact()
 		std::cout << "Error : You have left a field blank." << std::endl;
 		return ;
 	}
-    // On envoie un prompt 
-    // On renvoie l'entrer standard dans la variable firstName;
-
 
     std::cout << "Enter last name: ";
     std::getline(std::cin, lastName);
@@ -129,7 +127,7 @@ void    PhoneBook::addNewContact()
 		return ;
 	}
 
-    std::cout << "Enter darkestSecret: ";
+    std::cout << "Enter darkest secret: ";
     std::getline(std::cin, darkestSecret);
     if (!darkestSecret[0] || std::cin.eof())
 	{
@@ -137,20 +135,16 @@ void    PhoneBook::addNewContact()
 		return ;
 	}
 
-    //On stock les informations dans le tableau contact
+    // We store the information in the contact table
     contact[index].setFirstName(firstName);
     contact[index].setLastName(lastName);
     contact[index].setNickname(nickname);
     contact[index].setPhoneNumber(phoneNumber);
     contact[index].setDarkestSecret(darkestSecret);
-
-
-    // Si il y a deja 8 contact cela veut dire
-    // que le tableau est plein et donc on remet index a 0
     if (index == 7)
         index = 0;
     else
-        index++; // les informations sur les contacts ne mettrons a la suite
+        index++;
 }
 
 void    PhoneBook::print_info_one_contact(int index)
@@ -171,14 +165,11 @@ void    PhoneBook::searchContact()
     
     std::cout << "Enter contact index: " << std::endl;
     std::getline(std::cin, search);
-    // .c_str() converti l'object en chaine de caractere et atoi transforme cette chaine 
-    // de caractere en int 
-    if (search.empty() || search.size() != 1 || !isdigit(search[0]), atoi(search.c_str()) > 7)
+    if (search.empty() || search.size() != 1 || !std::isdigit(search[0]), std::atoi(search.c_str()) > 7)
     {
         std::cout << "Error: Bad argument" << std::endl;
         return ;
     }
-    // convertion de l'index
-    index_transform_to_int = atoi(search.c_str());
+    index_transform_to_int = std::atoi(search.c_str());
     print_info_one_contact(index_transform_to_int);
 }

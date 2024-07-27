@@ -1,8 +1,19 @@
-#include <iostream>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/27 12:06:50 by tebandam          #+#    #+#             */
+/*   Updated: 2024/07/27 12:06:53 by tebandam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
 // Constructor 
-// Initialisation de la class se fait dans le Constructor
+// Initialization
 Contact::Contact()
 {
     _firstName     = "";
@@ -19,7 +30,7 @@ Contact::~Contact()
 }
 
 // GETTERS
-// valeur de retour  nom de la fonction qui est associe a la class Contact
+// return value name of the function associated with the Contact class
 std::string Contact::getFirstName() const
 {
     return _firstName;

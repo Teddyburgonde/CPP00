@@ -8,7 +8,7 @@ CPP = c++
 
 #=================== FLAGS ==================#
 
-CFLAGS = -g -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 #================== SOURCES =================#
 
@@ -40,7 +40,7 @@ all: $(NAME)
 
 $(NAME) : $(OBJS)
 	$(CPP) $(CFLAGS) $(OBJS) -o $(NAME)
-	@printf "$(GREEN) EXECUTABLE READY !$(RESET)\n"
+	@echo "$(GREEN) EXECUTABLE READY !$(RESET)"
 
 clean: 
 	@$(RM) $(OBJS)

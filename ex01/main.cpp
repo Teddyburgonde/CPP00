@@ -1,34 +1,42 @@
-// std::cout << "Error: you have to choose between add , search and exit" << std::endl;
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/27 12:06:36 by tebandam          #+#    #+#             */
+/*   Updated: 2024/07/27 12:09:53 by tebandam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-
 int main()
 {
-    PhoneBook phone; // creation d'un instance(un objet) phone
+    int         index;
+    PhoneBook   phone; // create of an instance(an object) phone
     std::string commands;
-    int index;
 
     index = 0;
     phone.print_welcome();
-    while (1)
+    while (std::cin.eof() != 1) // as long as it does not contain of ctrl D
     {
         phone.print_choice_menu();
-        if (std::cin.eof() == 1)
-            return (1); 
         std::cout << "> ";
         std::getline(std::cin, commands);
         if (commands == "ADD")
             phone.addNewContact();
         else if (commands == "SEARCH")
             phone.searchContact();
-        else if (commands == "EXIT")
+        else if (commands == "EXIT" || std::cin.eof())
         {
             std::cout << "See you soon" << std::endl;
             break;
         }
-        std::cout << "Error: you have to choose between add , search and exit" << std::endl;
+        else
+            std::cout << "Error: you have to choose between ADD, SEARCH and EXIT" << std::endl;
     }
+    return (0);
 }
