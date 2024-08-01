@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 12:07:15 by tebandam          #+#    #+#             */
-/*   Updated: 2024/07/27 12:07:34 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/07/31 13:54:15 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,7 @@ std::string printFormatForDisplayContact(std::string str)
     std::string tmp;
 
     if (str.length() <= 10)
-    {
-        // until i equals 10 - word size
-        // print space
-        // at the end we add the word
-        for (size_t i = 0; i < (10 - str.length()); i++)
-            tmp += " ";
-        tmp += str;
-    }
+        std::cout << std::setw(10) << str;
     else
     {
         tmp = str;
@@ -126,7 +119,11 @@ void    PhoneBook::addNewContact()
 		std::cout << std::endl << "Error : You have left a field blank." << std::endl;
 		return ;
 	}
-
+    if (isdigit(phoneNumber[0]) == false)
+    {
+        std::cout << std::endl << "Error : Enter numbers only." << std::endl;
+        return ;
+    }
     std::cout << "Enter darkest secret: ";
     std::getline(std::cin, darkestSecret);
     if (!darkestSecret[0] || std::cin.eof())
@@ -134,8 +131,6 @@ void    PhoneBook::addNewContact()
 		std::cout << std::endl << "Error : You have left a field blank." << std::endl;
 		return ;
 	}
-
-    // We store the information in the contact table
     contact[index].setFirstName(firstName);
     contact[index].setLastName(lastName);
     contact[index].setNickname(nickname);
@@ -156,20 +151,25 @@ void    PhoneBook::print_info_one_contact(int index)
     std::cout << "Darkest Secret: " << contact[index].getDarkestSecret() << std::endl;
 }
 
+
 void    PhoneBook::searchContact()
 {
 
     std::string search;
     int index_transform_to_int;
     displayContact();
-    
     std::cout << "Enter contact index: " << std::endl;
     std::getline(std::cin, search);
-    if (search.empty() || search.size() != 1 || !std::isdigit(search[0]), std::atoi(search.c_str()) > 7)
+    if (search.empty() || search.size() != 1 || !std::isdigit(search[0]) || std::atoi(search.c_str()) > 7)
     {
         std::cout << "Error: Bad argument" << std::endl;
         return ;
     }
     index_transform_to_int = std::atoi(search.c_str());
+    if (contact[index_transform_to_int].getFirstName().empty())
+    {
+        std::cout << "Error: Line empty" << std::endl;
+        return ;
+    }
     print_info_one_contact(index_transform_to_int);
 }

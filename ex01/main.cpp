@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 12:06:36 by tebandam          #+#    #+#             */
-/*   Updated: 2024/07/27 12:09:53 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/07/30 09:43:56 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 int main()
 {
     int         index;
-    PhoneBook   phone; // create of an instance(an object) phone
+    PhoneBook   phone;
     std::string commands;
 
     index = 0;
     phone.print_welcome();
-    while (std::cin.eof() != 1) // as long as it does not contain of ctrl D
+    while (std::cin.eof() != 1)
     {
         phone.print_choice_menu();
         std::cout << "> ";

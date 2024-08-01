@@ -6,14 +6,12 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 12:06:50 by tebandam          #+#    #+#             */
-/*   Updated: 2024/07/27 12:06:53 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/07/30 09:43:05 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-// Constructor 
-// Initialization
 Contact::Contact()
 {
     _firstName     = "";
@@ -23,14 +21,11 @@ Contact::Contact()
     _darkestSecret = "";
 }
 
-// Destructor
 Contact::~Contact() 
 {
     
 }
 
-// GETTERS
-// return value name of the function associated with the Contact class
 std::string Contact::getFirstName() const
 {
     return _firstName;
@@ -55,8 +50,6 @@ std::string Contact::getDarkestSecret() const
 {
     return _darkestSecret;
 }
-
-// SETTERS 
 
 void    Contact::setFirstName(std::string n_FirstName)
 {

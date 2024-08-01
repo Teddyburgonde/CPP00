@@ -6,23 +6,22 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 12:07:40 by tebandam          #+#    #+#             */
-/*   Updated: 2024/07/27 12:07:43 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/07/30 13:32:40 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
-# include <iostream>
-#include  <string>
 #include <cstdlib>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook {
     
     public:
     
-    PhoneBook(void); // Constructor
-    ~PhoneBook(void); // Destructor
+    PhoneBook(void);
+    ~PhoneBook(void); 
     
 
     public:
@@ -34,7 +33,7 @@ class PhoneBook {
 
     private:
 	int		index; 
-    Contact contact[8]; // Create a tab
+    Contact contact[8];
     
     private:
     void    displayContact(void) const;
